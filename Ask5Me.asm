@@ -5,7 +5,7 @@
 
 .DATA
 
-Q1 DB '1) Who invented the computer? 1)Tesla 2)Babbage 3)Einstein? ','$'
+Q1 DB '1) Who invented the computer? 1)Tesla 2)Babbage 3)Einstein?','$'
 Ans1 DB '2'
 
 Q2 DB '2) Who is the all-time top scorer in football? 1)Messi 2)Ronaldo 3)Pele? ','$'
@@ -75,7 +75,7 @@ DisplayQ1 PROC
 
     CMP AL,[Ans1]
     JE Correct1
-    JMP Wrong1
+    JNE Wrong1
 
 Correct1:
     
@@ -106,7 +106,7 @@ DisplayQ2 PROC
 
     CMP AL,[Ans2]
     JE Correct2
-    JMP Wrong2
+    JNE Wrong2
 
 Correct2:
     INC Total
@@ -135,7 +135,7 @@ DisplayQ3 PROC
 
     CMP AL,[Ans3]
     JE Correct3
-    JMP Wrong3
+    JNE Wrong3
 
 Correct3:
     INC Total
@@ -162,7 +162,7 @@ DisplayQ4 PROC
 
     CMP AL,[Ans4]
     JE Correct4
-    JMP Wrong4
+    JNE Wrong4
 
 Correct4:
     INC Total
@@ -189,7 +189,7 @@ DisplayQ5 PROC
 
     CMP AL,[Ans5]
     JE Correct5
-    JMP Wrong5
+    JNE Wrong5
 
 Correct5:
     
